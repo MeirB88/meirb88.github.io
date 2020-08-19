@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+<addon id="plugin.program.MeirWizard" name="[COLOR royalblue]MEIR [/COLOR] WIZARD" version="1.1" provider-name="MeirB">
+    <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="startup.py" start="startup" />
+  <extension point="xbmc.addon.metadata">
+        <summary lang="en">[COLOR royalblue]MEIR [/COLOR] WIZARD</summary>
+        <description lang="en"></description>
+        <disclaimer lang="en"></disclaimer>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+        <screenshot></screenshot>
+        <screenshot></screenshot>
+        <screenshot></screenshot>
+    </assets>
+    <news></news>
+    </extension>
+</addon>
+
+<addon id="repository.meirwizard" name="[B][COLOR royalblue]MEIR[/COLOR] [COLOR gold]WIZARD[/COLOR][/B] repo" version="1.0" provider-name="meirb88">
+    <extension point="xbmc.addon.repository" name="Example Repository">
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/meirb88/meirwizard.github.io/master/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/meirb88/meirwizard.github.io/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/meirb88/meirwizard.github.io/master/zips/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>[B][COLOR royalblue]MEIR[/COLOR] [COLOR gold]WIZARD[/COLOR][/B] repo</summary>
+        <description>repository for MeirWizard, Israeli kodi builds.</description>
+        <disclaimer></disclaimer>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+</addons>

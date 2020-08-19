@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.meirwizard" name="[B][COLOR royalblue]MEIR[/COLOR] [COLOR gold]WIZARD[/COLOR][/B] repo" version="1.0" provider-name="meirb88">
+    <extension point="xbmc.addon.repository" name="Example Repository">
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/meirb88/meirwizard.github.io/master/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/meirb88/meirwizard.github.io/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/meirb88/meirwizard.github.io/master/zips/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>[B][COLOR royalblue]MEIR[/COLOR] [COLOR gold]WIZARD[/COLOR][/B] repo</summary>
+        <description>repository for MeirWizard, Israeli kodi builds.</description>
+        <disclaimer></disclaimer>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
