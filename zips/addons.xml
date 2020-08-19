@@ -28,9 +28,9 @@
 <addon id="repository.meirwizard" name="[B][COLOR royalblue]MEIR[/COLOR] [COLOR gold]WIZARD[/COLOR][/B] repo" version="1.0" provider-name="meirb88">
     <extension point="xbmc.addon.repository" name="Example Repository">
         <dir>
-            <info compressed="false">https://raw.githubusercontent.com/meirb88/meirwizard.github.io/master/zips/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/meirb88/meirwizard.github.io/master/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/meirb88/meirwizard.github.io/master/zips/</datadir>
+            <info compressed="false">https://raw.githubusercontent.com/meirb88/meirb88.github.io/master/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/meirb88/meirb88.github.io/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/meirb88/meirb88.github.io/master/zips/</datadir>
         </dir>
     </extension>
     <extension point="xbmc.addon.metadata">
