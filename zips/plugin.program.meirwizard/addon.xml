@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.program.meirwizard" name="[COLOR eoyalblue]MEIR[/COLOR][COLOR gold]Wizard[/COLOR]" version="1.3.1" provider-name="meirb88">
+<addon id="plugin.program.meirwizard" name="[COLOR royalblue]MEIR[/COLOR]Wizard" version="1.3.2" provider-name="drinfernoo">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
         <import addon="script.module.requests" />
@@ -14,12 +14,13 @@
     <extension point="xbmc.service" library="startup.py" start="startup" />
     
     <extension point="xbmc.addon.metadata">
-        <summary lang="he">ברוכים הבאים ל[COLOR eoyalblue]MEIR[/COLOR][COLOR gold]Wizard[/COLOR]!</summary>
-        <description lang="he">מגוון בילדים בעברית לקודי 18.</description>
+        <summary lang="en">[COLOR royalblue]Open[/COLOR]Wizard</summary>
+        <description lang="en">[COLOR royalblue]Open[/COLOR]Wizard offers many maintenance features, selective add-on data saving, and automated build installs.</description>
         <platform>all</platform>
         <reuselanguageinvoker>false</reuselanguageinvoker>
         <source>https://www.github.com/drinfernoo/plugin.program.openwizard/</source>
         <news>
+
         </news>
         <assets>
             <icon>icon.png</icon>
