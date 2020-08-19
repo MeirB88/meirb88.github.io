@@ -1,120 +1,124 @@
-# coding= utf-8
-import os, xbmc, xbmcaddon
+import xbmcaddon
+
+import os
 
 #########################################################
-### User Edit Variables #################################
+#         Global Variables - DON'T EDIT!!!              #
 #########################################################
-ADDON_ID       = xbmcaddon.Addon().getAddonInfo('id')
-ADDONTITLE     = '[COLOR royalblue]MEIR [/COLOR] WIZARD'
-EXCLUDES       = [ADDON_ID]
+ADDON_ID = xbmcaddon.Addon().getAddonInfo('id')
+PATH = xbmcaddon.Addon().getAddonInfo('path')
+ART = os.path.join(PATH, 'resources', 'media')
+#########################################################
+
+#########################################################
+#        User Edit Variables                            #
+#########################################################
+ADDONTITLE = '[COLOR eoyalblue]MEIR[/COLOR][COLOR gold]Wizard[/COLOR]'
+BUILDERNAME = 'MeirWizard'
+EXCLUDES = [ADDON_ID, 'repository.openwizard']
 # Text File with build info in it.
-BUILDFILE      = 'https://meir1998.000webhostapp.com/wizard/builds.txt'
-# How often you would list it to check for build updates in days
+BUILDFILE = 'https://meir1998.000webhostapp.com/wizard/builds.txt'
+# How often you would like it to check for build updates in days
 # 0 being every startup of kodi
-UPDATECHECK    = 0
-# Text File with apk info in it.
-APKFILE        = 'http://'
+UPDATECHECK = 0
+# Text File with apk info in it.  Leave as 'http://' to ignore
+APKFILE = 'http://'
 # Text File with Youtube Videos urls.  Leave as 'http://' to ignore
-YOUTUBETITLE   = ''
-YOUTUBEFILE    = 'http://'
+YOUTUBETITLE = ''
+YOUTUBEFILE = 'http://'
 # Text File for addon installer.  Leave as 'http://' to ignore
-ADDONFILE      = 'http://'
+ADDONFILE = 'http://'
 # Text File for advanced settings.  Leave as 'http://' to ignore
-ADVANCEDFILE   = 'http://'
-
-# Dont need to edit just here for icons stored locally
-PATH           = xbmcaddon.Addon().getAddonInfo('path')
-ART            = os.path.join(PATH, 'resources', 'art')
+ADVANCEDFILE = 'http://'
+#########################################################
 
 #########################################################
-### THEMING MENU ITEMS ##################################
+#        Theming Menu Items                             #
 #########################################################
 # If you want to use locally stored icons the place them in the Resources/Art/
 # folder of the wizard then use os.path.join(ART, 'imagename.png')
 # do not place quotes around os.path.join
 # Example:  ICONMAINT     = os.path.join(ART, 'mainticon.png')
-#           ICONSETTINGS  = 'http://aftermathwizard.net/repo/wizard/settings.png'
+#           ICONSETTINGS  = 'https://www.yourhost.com/repo/wizard/settings.png'
 # Leave as http:// for default icon
-ICONBUILDS     = 'http://'
-ICONMAINT      = 'http://'
-ICONAPK        = 'http://'
-ICONADDONS     = 'http://'
-ICONYOUTUBE    = 'http://'
-ICONSAVE       = 'http://'
-ICONTRAKT      = 'http://'
-ICONREAL       = 'http://'
-ICONLOGIN      = 'http://'
-ICONCONTACT    = 'http://'
-ICONSETTINGS   = 'http://'
-# Hide the ====== seperators 'Yes' or 'No'
-HIDESPACERS    = 'No'
-# Character used in seperator
-SPACER         = '[COLOR blue]----------------------------------[/COLOR]'
+ICONBUILDS = os.path.join(ART, 'builds.png')
+ICONMAINT = os.path.join(ART, 'maintenance.png')
+ICONSPEED = os.path.join(ART, 'speed.png')
+ICONAPK = os.path.join(ART, 'apkinstaller.png')
+ICONADDONS = os.path.join(ART, 'addoninstaller.png')
+ICONYOUTUBE = os.path.join(ART, 'youtube.png')
+ICONSAVE = os.path.join(ART, 'savedata.png')
+ICONTRAKT = os.path.join(ART, 'keeptrakt.png')
+ICONREAL = os.path.join(ART, 'keepdebrid.png')
+ICONLOGIN = os.path.join(ART, 'keeplogin.png')
+ICONCONTACT = os.path.join(ART, 'information.png')
+ICONSETTINGS = os.path.join(ART, 'settings.png')
+# Hide the section separators 'Yes' or 'No'
+HIDESPACERS = 'No'
+# Character used in separator
+SPACER = '='
 
 # You can edit these however you want, just make sure that you have a %s in each of the
 # THEME's so it grabs the text from the menu item
-COLOR1         = 'gold'
-COLOR2         = 'white'
-COLOR3         = 'black'
-COLOR3         = 'blue'
-# Primary menu items   / %s is the menu item and is required
-THEME1         = '[COLOR '+COLOR2+']%s[/COLOR]'
-# Build Names          / %s is the menu item and is required
-THEME2         = '[COLOR '+COLOR2+']%s[/COLOR]'
-# Alternate items      / %s is the menu item and is required
-THEME3         = '[COLOR '+COLOR1+']%s[/COLOR]'
-# Current Build Header / %s is the menu item and is required
-THEME4         = '[COLOR '+COLOR1+']%s[/COLOR] [COLOR '+COLOR2+']בילד נוכחי:[/COLOR]'
-# Current Theme Header / %s is the menu item and is required
-THEME5         = '[COLOR '+COLOR1+']Current Theme:[/COLOR] [COLOR '+COLOR2+']%s[/COLOR]'
+COLOR1 = 'royalblue'
+COLOR2 = 'white'
+# Primary menu items   / {0} is the menu item and is required
+THEME1 = u'[COLOR {color1}][I]([COLOR {color1}][B]Open[/B][/COLOR][COLOR {color2}]Wizard[COLOR {color1}])[/I][/COLOR] [COLOR {color2}]{{}}[/COLOR]'.format(color1=COLOR1, color2=COLOR2)
+# Build Names          / {0} is the menu item and is required
+THEME2 = u'[COLOR {color1}]{{}}[/COLOR]'.format(color1=COLOR1)
+# Alternate items      / {0} is the menu item and is required
+THEME3 = u'[COLOR {color1}]{{}}[/COLOR]'.format(color1=COLOR1)
+# Current Build Header / {0} is the menu item and is required
+THEME4 = u'[COLOR {color1}]Current Build:[/COLOR] [COLOR {color2}]{{}}[/COLOR]'.format(color1=COLOR1, color2=COLOR2)
+# Current Theme Header / {0} is the menu item and is required
+THEME5 = u'[COLOR {color1}]Current Theme:[/COLOR] [COLOR {color2}]{{}}[/COLOR]'.format(color1=COLOR1, color2=COLOR2)
 
 # Message for Contact Page
 # Enable 'Contact' menu item 'Yes' hide or 'No' dont hide
-HIDECONTACT    = 'No'
+HIDECONTACT = 'Yes'
 # You can add \n to do line breaks
-CONTACT        = ''
-#Images used for the contact window.  http:// for default icon and fanart
-CONTACTICON    = 'http://'
-CONTACTFANART  = 'http://'
+CONTACT = 'Thank you for choosing OpenWizard.\n\nContact us on Github at http://www.github.com/drinfernoo/plugin.program.openwizard/'
+# Images used for the contact window.  http:// for default icon and fanart
+CONTACTICON = os.path.join(ART, 'qricon.png')
+CONTACTFANART = 'http://'
 #########################################################
 
 #########################################################
-### AUTO UPDATE #########################################
-########## FOR THOSE WITH NO REPO #######################
+#        Auto Update For Those With No Repo             #
+#########################################################
 # Enable Auto Update 'Yes' or 'No'
-AUTOUPDATE     = 'Yes'
-# Url to wizard version
-WIZARDFILE     = ''
+AUTOUPDATE = 'No'
 #########################################################
 
 #########################################################
-### AUTO INSTALL ########################################
-########## REPO IF NOT INSTALLED ########################
+#        Auto Install Repo If Not Installed             #
+#########################################################
 # Enable Auto Install 'Yes' or 'No'
-AUTOINSTALL    = 'No'
+AUTOINSTALL = 'Yes'
 # Addon ID for the repository
-REPOID         = ''
+REPOID = 'repository.meirwizard'
 # Url to Addons.xml file in your repo folder(this is so we can get the latest version)
-REPOADDONXML   = ''
+REPOADDONXML = 'https://raw.githubusercontent.com/MeirB88/meirb88.github.io/blob/master/repository.meirwizard/addon.xml'
 # Url to folder zip is located in
-REPOZIPURL     = ''
+REPOZIPURL = 'https://raw.githubusercontent.com/MeirB88/meirb88.github.io/tree/master/zips/repository.meirwizard'
 #########################################################
 
 #########################################################
-### NOTIFICATION WINDOW##################################
+#        Notification Window                            #
 #########################################################
 # Enable Notification screen Yes or No
-ENABLE         = 'Yes'
+ENABLE = 'Yes'
 # Url to notification file
-NOTIFICATION   = 'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0tjYXQxMjMvVHh0L21hc3Rlci9ub3RpZnkudHh0'.decode('base64')
-NOTIFICATION2  = 'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0tjYXQxMjMvVHh0L21hc3Rlci9ub3RpZnkyLnR4dA=='.decode('base64')
-NOTIFICATION3  = 'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0tjYXQxMjMvVHh0L21hc3Rlci9ub3RpZnkzLnR4dA=='.decode('base64')
-NOTIFICATION4  = 'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0tjYXQxMjMvVHh0L21hc3Rlci9ub3RpZnk0LnR4dA=='.decode('base64')
+NOTIFICATION = 'http://'
 # Use either 'Text' or 'Image'
-HEADERTYPE     = 'Text'
-HEADERMESSAGE  = '[B]MeirWizard[/B]'
+HEADERTYPE = 'Text'
+# Font size of header
+FONTHEADER = 'Font14'
+HEADERMESSAGE = '[COLOR limegreen][B]Open[/B][/COLOR]Wizard'
 # url to image if using Image 424x180
-HEADERIMAGE    = ''
+HEADERIMAGE = 'http://'
+# Font for Notification Window
+FONTSETTINGS = 'Font13'
 # Background for Notification Window
-BACKGROUND     = ''
+BACKGROUND = 'http://'
 #########################################################
