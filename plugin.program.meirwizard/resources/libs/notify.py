@@ -481,13 +481,9 @@ def firstRunSettings():
 def firstRun():
 	class MyWindow(xbmcgui.WindowXMLDialog):
 		def __init__(self, *args, **kwargs):
-			self.title = "[COLOR gold]ברוכים הבאים ל-The KodiCat![/COLOR]"
+			self.title = "[B]ברוכים הבאים ל[COLOR royalblue]MEIR[/COLOR] [COLOR gold]WIZARD[/COLOR][/B]"
 			self.msg   ='''\
-בקבוצת "KodiCat" עומדים לרשותכם הבילדים וההרחבות העדכניות ביותר לקודי 17 ו-18.
-המקור הבלעדי לתמיכה ועדכונים לבילדים וההרחבות בקבוצת וערוץ הטלגרם בלבד!
-
-תרומות לתפעול ושכירות השרת (גם התרומה הצנועה ביותר) יתקבלו בברכה:
-https://www.paypal.me/TheKodiCat123
+            בילדים ישראליים בעברית לקודי 18!
                 '''
 			self.msg   = THEME2 % self.msg
 

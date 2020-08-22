@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.program.meirwizard" name="[B][COLOR royalblue]MEIR[/COLOR] [COLOR gold]WIZARD[/COLOR][/B]" version="1.4.2" provider-name="[COLOR aqua]MeirB88[/COLOR]">
+<addon id="plugin.program.meirwizard" name="[B][COLOR royalblue]MEIR[/COLOR] [COLOR gold]WIZARD[/COLOR][/B]" version="1.4.2.1" provider-name="[COLOR aqua]MeirB88[/COLOR]">
     <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
